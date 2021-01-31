@@ -15,17 +15,20 @@ const theme = {
 
   colorBg: "#0B0C10",
   colorBgAccent: "#1F2833",
+  colorMenu: `rgba(31, 40, 51, 0.85)`,
   colorText: "#F0F1F2",
   colorTextAccent: "#C5C6C7",
   colorPrimary: "#66FCF1",
-  colorPrimaryAccent: "#45A29E",
+  colorPrimaryAccent: "#4CB3AE",
   colorAlt: "#CED9D8",
 
-  fontFira: `'Lato', sans-serif`,
+  fontFira: `'Fira Code', monospace`,
   fontOswald: `'Oswald', sans-serif`,
   fontLato: `'Lato', sans-serif`,
 
   sizeBase: "16px",
+
+  sizeMenuIcon: "2.75rem",
 
   mixins,
 };
