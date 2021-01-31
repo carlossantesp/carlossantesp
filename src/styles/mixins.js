@@ -6,6 +6,11 @@ const mixins = {
     top: 0;
     left: 0;
   `,
+  positionAbsolute: css`
+    position: absolute;
+    top: 0;
+    left: 0;
+  `,
 
   flexCenter: css`
     display: flex;

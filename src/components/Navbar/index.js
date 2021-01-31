@@ -14,8 +14,9 @@ import {
   NavItem,
   NavLinks,
   NavBtn,
-  NavBtnLink,
 } from "./NavbarElements";
+
+import { BtnLink } from "../elements/Button";
 
 const Navbar = ({ isOpen, toggle }) => {
   return (
@@ -47,7 +48,7 @@ const Navbar = ({ isOpen, toggle }) => {
               </NavItem>
             </NavMenu>
             <NavBtn>
-              <NavBtnLink to="/">Resume</NavBtnLink>
+              <BtnLink to="/">Resume</BtnLink>
             </NavBtn>
           </NavMenuContainer>
         </NavbarContainer>

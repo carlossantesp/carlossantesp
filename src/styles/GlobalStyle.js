@@ -10,9 +10,10 @@ const GlobalStyle = createGlobalStyle`
   *:before,
   *:after {
     box-sizing: inherit;
+    margin: 0;
+    padding: 0;
   }
   body {
-    margin: 0;
     width: 100%;
     min-height: 100%;
     overflow-x: hidden;
@@ -21,7 +22,6 @@ const GlobalStyle = createGlobalStyle`
     font-family: ${({ theme }) => theme.fontLato};
     font-size: ${({ theme }) => theme.sizeBase};
     line-height: 1.3;
-
   }
 
   #root {
@@ -51,15 +51,6 @@ const GlobalStyle = createGlobalStyle`
     text-decoration-skip-ink: auto;
     color: inherit;
     cursor: pointer;
-  }
-
-  p {
-    margin: 0 0 15px 0;
-
-    &:last-child,
-    &:last-of-type {
-      margin: 0;
-    }
   }
 `;
 
