@@ -15,6 +15,7 @@ const theme = {
 
   colorBg: "#0B0C10",
   colorBgHero: `rgba(11, 12, 16, 0.7)`,
+  colorImageSelf: `rgba(56,186,204,0.15)`,
   colorBgAccent: "#1F2833",
   colorMenu: `rgba(31, 40, 51, 0.85)`,
   colorText: "#F0F1F2",

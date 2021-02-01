@@ -12,10 +12,9 @@ import {
   HeroBtnWrapper,
 } from "./HeroSectionElements";
 import { BtnLinkC } from "../elements/Button";
-import { data } from "../../data/information";
 
-const HeroSection = () => {
-  const { name, job, info, email } = data;
+const HeroSection = ({ info }) => {
+  const { name, job, resume, email } = info;
 
   return (
     <>
@@ -27,7 +26,7 @@ const HeroSection = () => {
           <HeroSay>Hi, my name is</HeroSay>
           <HeroTitle>{name}</HeroTitle>
           <HeroSubtitle>{job}</HeroSubtitle>
-          <HeroDescription>{info}</HeroDescription>
+          <HeroDescription>{resume}</HeroDescription>
           <HeroBtnWrapper>
             <BtnLinkC href={`mailto:${email}`}>Get In Touch</BtnLinkC>
           </HeroBtnWrapper>

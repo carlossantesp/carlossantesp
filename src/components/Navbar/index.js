@@ -1,7 +1,6 @@
 import React from "react";
 import Logo from "../icons/Logo";
-import CsMenu from "../icons/Menu";
-import CsTimes from "../icons/Times";
+import { BsMenu, BsTimes } from "../icons/basic";
 
 import {
   Nav,
@@ -27,11 +26,11 @@ const Navbar = ({ isOpen, toggle }) => {
             <Logo />
           </NavLogo>
           <MobileIcon onClick={toggle}>
-            <CsMenu fill="current-color" />
+            <BsMenu />
           </MobileIcon>
           <NavMenuContainer isOpen={isOpen}>
             <MobileCloseIcon onClick={toggle}>
-              <CsTimes />
+              <BsTimes />
             </MobileCloseIcon>
             <NavMenu>
               <NavItem>
@@ -48,7 +47,7 @@ const Navbar = ({ isOpen, toggle }) => {
               </NavItem>
             </NavMenu>
             <NavBtn>
-              <BtnLink to="/">Resume</BtnLink>
+              <BtnLink href="#">Resume</BtnLink>
             </NavBtn>
           </NavMenuContainer>
         </NavbarContainer>
