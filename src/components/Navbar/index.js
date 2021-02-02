@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { animateScroll as scroll } from "react-scroll";
 import Logo from "../icons/Logo";
 import { BsMenu, BsTimes } from "../icons/basic";
 
@@ -18,11 +19,26 @@ import {
 import { BtnLink } from "../elements/Button";
 
 const Navbar = ({ isOpen, toggle }) => {
+  const [scrollNav, setScrollNav] = useState(false);
+
+  const changeNav = () => {
+    if (window.scrollY >= 80) setScrollNav(true);
+    else setScrollNav(false);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", changeNav);
+  }, []);
+
+  const toggleHome = () => {
+    scroll.scrollToTop();
+  };
+
   return (
     <>
-      <Nav>
+      <Nav scrollNav={scrollNav}>
         <NavbarContainer>
-          <NavLogo to="/">
+          <NavLogo to="/" onClick={toggleHome}>
             <Logo />
           </NavLogo>
           <MobileIcon onClick={toggle}>
@@ -34,16 +50,56 @@ const Navbar = ({ isOpen, toggle }) => {
             </MobileCloseIcon>
             <NavMenu>
               <NavItem>
-                <NavLinks to="about">About</NavLinks>
+                <NavLinks
+                  to="about"
+                  onClick={toggle}
+                  smooth={true}
+                  duration={500}
+                  spy={true}
+                  exact="true"
+                  offset={-64}
+                >
+                  About
+                </NavLinks>
               </NavItem>
               <NavItem>
-                <NavLinks to="projects">Projects</NavLinks>
+                <NavLinks
+                  to="projects"
+                  onClick={toggle}
+                  smooth={true}
+                  duration={500}
+                  spy={true}
+                  exact="true"
+                  offset={-64}
+                >
+                  Projects
+                </NavLinks>
               </NavItem>
               <NavItem>
-                <NavLinks to="services">Services</NavLinks>
+                <NavLinks
+                  to="services"
+                  onClick={toggle}
+                  smooth={true}
+                  duration={500}
+                  spy={true}
+                  exact="true"
+                  offset={-64}
+                >
+                  Services
+                </NavLinks>
               </NavItem>
               <NavItem>
-                <NavLinks to="contact">Contact</NavLinks>
+                <NavLinks
+                  to="contact"
+                  onClick={toggle}
+                  smooth={true}
+                  duration={500}
+                  spy={true}
+                  exact="true"
+                  offset={-64}
+                >
+                  Contact
+                </NavLinks>
               </NavItem>
             </NavMenu>
             <NavBtn>

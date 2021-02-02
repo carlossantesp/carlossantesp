@@ -15,7 +15,7 @@ import { SMobile, SDesign, SDevelopment, SPrototype } from "../icons/services";
 
 const ServiceSection = () => {
   return (
-    <ServiceContainer>
+    <ServiceContainer id="services">
       <TitleWrapper>
         <Title section="03">Services</Title>
       </TitleWrapper>

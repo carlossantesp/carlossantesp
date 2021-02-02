@@ -18,7 +18,7 @@ import {
 const ContactSection = ({ contact }) => {
   const { email, github, codepen, linkedin, facebook } = contact;
   return (
-    <ContactContainer>
+    <ContactContainer id="contact">
       <TitleWrapper>
         <Title section="04">Contact Me</Title>
       </TitleWrapper>

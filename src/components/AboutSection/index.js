@@ -15,7 +15,7 @@ const AboutSection = ({ data, skills }) => {
   const { image, description } = data;
   return (
     <>
-      <AboutContainer>
+      <AboutContainer id="about">
         <TitleWrapper>
           <Title section="01">About Me</Title>
         </TitleWrapper>

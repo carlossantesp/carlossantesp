@@ -3,10 +3,12 @@ import { Link as LinkR } from "react-router-dom";
 import { Link as LinkS } from "react-scroll";
 
 export const Nav = styled.header`
-  background-color: ${({ theme }) => theme.colorMenu};
+  background-color: ${({ scrollNav, theme }) =>
+    scrollNav ? theme.colorBgAccent : theme.colorMenu};
   ${({ theme }) => theme.mixins.positionFixed}
   width: 100%;
   height: 4rem;
+  z-index: 1;
 `;
 
 export const NavbarContainer = styled.div`
