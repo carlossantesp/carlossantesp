@@ -103,7 +103,12 @@ const Navbar = ({ isOpen, toggle }) => {
               </NavItem>
             </NavMenu>
             <NavBtn>
-              <BtnLink href="#">Resume</BtnLink>
+              <BtnLink
+                href="https://drive.google.com/file/d/19W_XnMWKQfi3qhgdEygvmw9t44onYXek/view?usp=sharing"
+                target="_blank"
+              >
+                Resume
+              </BtnLink>
             </NavBtn>
           </NavMenuContainer>
         </NavbarContainer>
