@@ -68,5 +68,5 @@ export const ServiceInfo = styled.p`
   font-size: 1rem;
   text-align: center;
   margin-top: 1rem;
-  height: 5rem;
+  min-height: 5rem;
 `;

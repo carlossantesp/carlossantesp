@@ -113,6 +113,11 @@ export const NavLinks = styled(LinkS)`
   display: block;
   padding: 1rem;
   text-align: center;
+  @media screen and (min-width: 992px) {
+    &.active {
+      border-bottom: 3px solid ${({ theme }) => theme.colorPrimaryAccent};
+    }
+  }
   &::before {
     counter-increment: section;
     content: "0" counter(section) ".";
