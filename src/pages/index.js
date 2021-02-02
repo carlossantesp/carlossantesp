@@ -5,6 +5,7 @@ import ServiceSection from "../components/ServiceSection";
 import Navbar from "../components/Navbar";
 import { data } from "../data/information";
 import ContactSection from "../components/ContactSection";
+import Footer from "../components/Footer";
 
 const Home = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,6 +21,7 @@ const Home = () => {
         <AboutSection data={data.info} skills={data.skills} />
         <ServiceSection />
         <ContactSection contact={data.socials} />
+        <Footer name={data.info.name} />
       </main>
     </>
   );
