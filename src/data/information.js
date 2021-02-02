@@ -64,4 +64,66 @@ export const data = {
       title: "Linux",
     },
   ],
+  projects: [
+    {
+      id: "1",
+      name: "My web portfolio",
+      description:
+        "My professional personal website, where my portfolio is displayed, was developed with react.",
+      repo: "https://github.com/carlossantesp/carlossantesp",
+      link: "https://carlossantesp.github.io",
+      image: require("../images/projects/portfolio-web.png").default,
+      technologies: ["HTML5", "CSS", "React", "StyledComponents"],
+    },
+    {
+      id: "2",
+      name: "Lading Page Doll",
+      description:
+        "DOLL informative web page, about Virtual Banking Made Easy, implemented with react.",
+      repo: "https://github.com/carlossantesp/landingpage-doll",
+      link: "https://ladingpage-doll.netlify.app/",
+      image: require("../images/projects/ladinpage-doll.png").default,
+      technologies: ["React", "StyledComponents", "Smoot-Scroll"],
+    },
+    {
+      id: "3",
+      name: "Social App",
+      description:
+        "Real-time social network implemented with Vue on the frontend and Laravel on the backend.",
+      repo: "https://github.com/carlossantesp/socialapp",
+      link: "https://github.com/carlossantesp/socialapp",
+      image: require("../images/projects/red_social.png").default,
+      technologies: ["HTML5", "Bootstrap", "Vuejs", "Laravel"],
+    },
+    {
+      id: "4",
+      name: "Simple my team page",
+      description:
+        "Team Page that shows information about a team from THE CREATIVE CREW, designed and implemented with Vuejs and SASS.",
+      repo: "https://github.com/carlossantesp/team-page",
+      link: "https://carlossantesp.github.io/team-page",
+      image: require("../images/projects/my-team-page.png").default,
+      technologies: ["HTML5", "SASS", "Vuejs", "AnimateJS"],
+    },
+    {
+      id: "5",
+      name: "Blog CMS",
+      description:
+        "CMS Blog showing user posts, developed with Laravel on the backend, with Bootstrap and Blade on the frontend.",
+      repo: "https://github.com/carlossantesp/blog",
+      link: "https://github.com/carlossantesp/blog",
+      image: require("../images/projects/blog-cms.png").default,
+      technologies: ["HTML5", "Bootstrap", "Blade", "Laravel"],
+    },
+    {
+      id: "6",
+      name: "Simple gallery page",
+      description:
+        "Gallery page that shows the user information and the photos I take, implemented with CSS grid and BEM.",
+      repo: "https://github.com/carlossantesp/my-gallery",
+      link: "https://carlossantesp.github.io/my-gallery",
+      image: require("../images/projects/my-gallery.png").default,
+      technologies: ["HTML5", "SASS", "CSS Grid", "BEM"],
+    },
+  ],
 };

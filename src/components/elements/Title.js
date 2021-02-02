@@ -4,6 +4,7 @@ export const Title = styled.h2`
   color: ${({ theme }) => theme.colorText};
   font-family: ${({ theme }) => theme.fontOswald};
   font-size: 1.75rem;
+  font-weight: 500;
   display: grid;
   align-items: flex-end;
   grid-template-columns: auto auto 1fr;
