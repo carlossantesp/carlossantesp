@@ -11,6 +11,13 @@ export const data = {
     resume:
       "I am a web developer with more than 2 years of experience in frontend, I am passionate about designing and implementing responsive websites for each device, following the mobile-first methodology.",
   },
+  socials: {
+    email: "carlos.santesp@gmail.com",
+    github: "https://github.com/carlossantesp",
+    codepen: "https://codepen.io/csantillan",
+    linkedin: "https://www.linkedin.com/in/dev-santillan-carlos",
+    facebook: "https://www.facebook.com/C.Santi.E",
+  },
   skills: [
     {
       icon: require("../images/skills/skill_html5.svg").default,
