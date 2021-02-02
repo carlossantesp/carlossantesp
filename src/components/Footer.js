@@ -16,6 +16,9 @@ const FooterDescription = styled.p`
   font-size: 0.75rem;
   padding: 0.75rem 0;
   text-align: center;
+  @media screen and (min-width: 992px) {
+    padding: 1.2rem 0;
+  }
 `;
 
 const Footer = ({ name }) => {

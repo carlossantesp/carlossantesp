@@ -2,6 +2,9 @@ import styled from "styled-components";
 
 export const ContactContainer = styled.section`
   padding: 5rem 1rem 0 1rem;
+  @media screen and (min-width: 992px) {
+    padding-bottom: 5rem;
+  }
 `;
 
 export const ContactContent = styled.div`
@@ -13,6 +16,7 @@ export const ContactContent = styled.div`
   }
   @media screen and (min-width: 992px) {
     ${({ theme }) => theme.bg.desktopXS};
+    margin: 3rem auto;
   }
 `;
 
@@ -30,6 +34,9 @@ export const ContactDescription = styled.p`
 export const ContactSocialWrapper = styled.div`
   ${({ theme }) => theme.mixins.flexCenter};
   margin-top: 1rem;
+  @media screen and (min-width: 992px) {
+    margin-top: 3rem;
+  }
 `;
 
 export const ContactSocial = styled.a`
@@ -43,5 +50,9 @@ export const ContactSocial = styled.a`
   &:hover {
     background-color: ${({ theme }) => theme.colorPrimaryAccent};
     color: ${({ theme }) => theme.colorText};
+  }
+  @media screen and (min-width: 992px) {
+    width: 5rem;
+    margin: 0 1rem;
   }
 `;
