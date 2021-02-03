@@ -71,7 +71,7 @@ export const data = {
       description:
         "My professional personal website, where my portfolio is displayed, was developed with react.",
       repo: "https://github.com/carlossantesp/carlossantesp",
-      link: "https://carlossantesp.github.io",
+      link: "https://carlos.santillan.dev",
       image: require("../images/projects/portfolio-web.png").default,
       technologies: ["HTML5", "CSS", "React", "StyledComponents"],
     },

@@ -104,7 +104,7 @@ const Navbar = ({ isOpen, toggle }) => {
             </NavMenu>
             <NavBtn>
               <BtnLink
-                href="https://drive.google.com/file/d/19W_XnMWKQfi3qhgdEygvmw9t44onYXek/view?usp=sharing"
+                href="https://drive.google.com/file/d/1JyK_uNwL0wHpCvs0gwSvo3lesq9FJeSm/view?usp=sharing"
                 target="_blank"
               >
                 Resume

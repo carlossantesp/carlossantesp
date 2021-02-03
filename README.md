@@ -8,7 +8,7 @@ I am a web developer with more than 2 years of experience in frontend, I am pass
 - Linux, Git, Figma
 
 ## Contact
-- [carlos-santillan.dev](https://carlos-santillan.dev)
+- [carlos-santillan.dev](https://carlos.santillan.dev)
 - [@dev-santillan-carlos/](https://www.linkedin.com/in/dev-santillan-carlos/) on Linkedin
 - [@C.Santi.E](https://www.facebook.com/C.Santi.E/) on Facebook
 
