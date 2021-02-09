@@ -87,13 +87,13 @@ export const data = {
     },
     {
       id: "3",
-      name: "Social App",
+      name: "Lading Page LoopStudio",
       description:
-        "Real-time social network implemented with Vue on the frontend and Laravel on the backend.",
-      repo: "https://github.com/carlossantesp/socialapp",
-      link: "https://github.com/carlossantesp/socialapp",
-      image: require("../images/projects/red_social.png").default,
-      technologies: ["HTML5", "Bootstrap", "Vuejs", "Laravel"],
+        "LoopStudio informative web page, about Immersive experiences that deliver, implemented with Grid and SASS.",
+      repo: "https://github.com/carlossantesp/loopstudios-ladingpage",
+      link: "https://carlossantesp.github.io/loopstudios-ladingpage",
+      image: require("../images/projects/loopstudios.jpg").default,
+      technologies: ["HTML5", "CSS Grid", "SASS", "BEM"],
     },
     {
       id: "4",
