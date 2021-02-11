@@ -107,13 +107,13 @@ export const data = {
     },
     {
       id: "5",
-      name: "Blog CMS",
+      name: "Interior Consultant",
       description:
-        "CMS Blog showing user posts, developed with Laravel on the backend, with Bootstrap and Blade on the frontend.",
-      repo: "https://github.com/carlossantesp/blog",
-      link: "https://github.com/carlossantesp/blog",
-      image: require("../images/projects/blog-cms.png").default,
-      technologies: ["HTML5", "Bootstrap", "Blade", "Laravel"],
+        'Home page of "The Interior" about modern interior information designed and developed with html and sass.',
+      repo: "https://github.com/carlossantesp/interior-consultant",
+      link: "https://carlossantesp.github.io/interior-consultant/",
+      image: require("../images/projects/interior-consultant.png").default,
+      technologies: ["HTML5", "SCSS", "BEM"],
     },
     {
       id: "6",
