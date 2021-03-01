@@ -30,41 +30,29 @@ const ServiceSection = () => {
             <ServiceIcon>
               <SMobile />
             </ServiceIcon>
-            <ServiceTitle>Fully Responsive</ServiceTitle>
-            <ServiceInfo>
-              Your site will display properly on any device, including desktop
-              computers, tablets and mobile phones.
-            </ServiceInfo>
+            <ServiceTitle>{t("service-section.responsive")}</ServiceTitle>
+            <ServiceInfo>{t("service-section.responsive-info")}</ServiceInfo>
           </ServiceCard>
           <ServiceCard>
             <ServiceIcon>
               <SPrototype />
             </ServiceIcon>
-            <ServiceTitle>UI Prototypes</ServiceTitle>
-            <ServiceInfo>
-              A good prototyping of the web design allows to visualize the
-              client how your website will look before implementing it.
-            </ServiceInfo>
+            <ServiceTitle>{t("service-section.prototype")}</ServiceTitle>
+            <ServiceInfo>{t("service-section.prototype-info")}</ServiceInfo>
           </ServiceCard>
           <ServiceCard>
             <ServiceIcon>
               <SDesign />
             </ServiceIcon>
-            <ServiceTitle>Creative Design</ServiceTitle>
-            <ServiceInfo>
-              A good and attractive web design helps you keep your leads on your
-              site, which is the digital face of your business.
-            </ServiceInfo>
+            <ServiceTitle>{t("service-section.creative")}</ServiceTitle>
+            <ServiceInfo>{t("service-section.creative-info")}</ServiceInfo>
           </ServiceCard>
           <ServiceCard>
             <ServiceIcon>
               <SDevelopment />
             </ServiceIcon>
-            <ServiceTitle>Development</ServiceTitle>
-            <ServiceInfo>
-              I know the importance of web design and can help you create a
-              website you’ll love.
-            </ServiceInfo>
+            <ServiceTitle>{t("service-section.development")}</ServiceTitle>
+            <ServiceInfo>{t("service-section.development-info")}</ServiceInfo>
           </ServiceCard>
         </ServiceWrapper>
       </ServiceContent>

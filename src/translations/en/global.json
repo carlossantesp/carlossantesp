@@ -20,7 +20,15 @@
   },
   "service-section": {
     "title": "Services",
-    "description": "Services I offer to my clients"
+    "description": "Services I offer to my clients",
+    "responsive": "Fully Responsive",
+    "responsive-info": "Your site will display properly on any device, including desktop computers, tablets and mobile phones.",
+    "prototype": "UI Prototypes",
+    "prototype-info": "A good prototyping of the web design allows to visualize the client how your website will look before implementing it.",
+    "creative": "Creative Design",
+    "creative-info": "A good and attractive web design helps you keep your leads on your site, which is the digital face of your business.",
+    "development": "Development",
+    "development-info": "I know the importance of web design and can help you create a website you’ll love."
   },
   "contact-section": {
     "title": "Contact Me",

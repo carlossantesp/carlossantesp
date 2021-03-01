@@ -20,7 +20,15 @@
   },
   "service-section": {
     "title": "Servicios",
-    "description": "Servicios que ofrezco a mis clientes"
+    "description": "Servicios que ofrezco a mis clientes",
+    "responsive": "Full Responsivo",
+    "responsive-info": "Su sitio se mostrará correctamente en cualquier dispositivo, incluidas portatiles, tabletas y teléfonos móviles.",
+    "prototype": "Prototipos UI",
+    "prototype-info": "Un buen prototipo del diseño web permite visualizar al cliente cómo se verá su sitio web antes de ser implementarlo.",
+    "creative": "Diseño Creativo",
+    "creative-info": "Un buen y atractivo diseño web le ayuda a mantener sus clientes potenciales en su sitio, que es la cara digital de su negocio.",
+    "development": "Desarrollo",
+    "development-info": "Conozco la importancia del diseño web y puedo ayudarlo a crear un sitio web que le encantará."
   },
   "contact-section": {
     "title": "Contáctame",
