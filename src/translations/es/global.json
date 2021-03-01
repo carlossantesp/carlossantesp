@@ -1,0 +1,32 @@
+{
+  "navbar": {
+    "about": "Sobre mí",
+    "projects": "Proyectos",
+    "services": "Servicios",
+    "contact": "Contactame",
+    "resume": "Curriculum"
+  },
+  "hero": {
+    "say": "Hola, mi nombre es",
+    "button-get": "Contáctame"
+  },
+  "about": {
+    "title": "Sobre Mí",
+    "details": "Estas son algunas tecnologías que he estado trabajando recientemente:"
+  },
+  "project-section": {
+    "title": "Algunas ideas que he construido",
+    "see-more": "Ver más proyectos"
+  },
+  "service-section": {
+    "title": "Servicios",
+    "description": "Servicios que ofrezco a mis clientes"
+  },
+  "contact-section": {
+    "title": "Contáctame",
+    "description": "Si tienes una oferta de trabajo, propuesta de proyecto o estás interesado en que trabajemos juntos contáctame."
+  },
+  "footer": {
+    "info":"Diseñado y desarrollado por"
+  }
+}

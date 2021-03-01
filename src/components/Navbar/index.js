@@ -16,10 +16,13 @@ import {
   NavBtn,
 } from "./NavbarElements";
 
+import { useTranslation } from "react-i18next";
+
 import { BtnLink } from "../elements/Button";
 
 const Navbar = ({ isOpen, toggle }) => {
   const [scrollNav, setScrollNav] = useState(false);
+  const { t } = useTranslation("global");
 
   const changeNav = () => {
     if (window.scrollY >= 80) setScrollNav(true);
@@ -28,6 +31,7 @@ const Navbar = ({ isOpen, toggle }) => {
 
   useEffect(() => {
     window.addEventListener("scroll", changeNav);
+    return () => window.removeEventListener("scroll", changeNav);
   }, []);
 
   const toggleHome = () => {
@@ -59,7 +63,7 @@ const Navbar = ({ isOpen, toggle }) => {
                   exact="true"
                   offset={-64}
                 >
-                  About
+                  {t("navbar.about")}
                 </NavLinks>
               </NavItem>
               <NavItem>
@@ -72,7 +76,7 @@ const Navbar = ({ isOpen, toggle }) => {
                   exact="true"
                   offset={-64}
                 >
-                  Projects
+                  {t("navbar.projects")}
                 </NavLinks>
               </NavItem>
               <NavItem>
@@ -85,7 +89,7 @@ const Navbar = ({ isOpen, toggle }) => {
                   exact="true"
                   offset={-64}
                 >
-                  Services
+                  {t("navbar.services")}
                 </NavLinks>
               </NavItem>
               <NavItem>
@@ -98,7 +102,7 @@ const Navbar = ({ isOpen, toggle }) => {
                   exact="true"
                   offset={-64}
                 >
-                  Contact
+                  {t("navbar.contact")}
                 </NavLinks>
               </NavItem>
             </NavMenu>
@@ -107,7 +111,7 @@ const Navbar = ({ isOpen, toggle }) => {
                 href="https://drive.google.com/file/d/1JyK_uNwL0wHpCvs0gwSvo3lesq9FJeSm/view?usp=sharing"
                 target="_blank"
               >
-                Resume
+                {t("navbar.resume")}
               </BtnLink>
             </NavBtn>
           </NavMenuContainer>

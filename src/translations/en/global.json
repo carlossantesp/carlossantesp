@@ -1,0 +1,32 @@
+{
+  "navbar": {
+    "about": "About",
+    "projects": "Projects",
+    "services": "Services",
+    "contact": "Contact",
+    "resume": "Resume"
+  },
+  "hero": {
+    "say": "Hi, my name is",
+    "button-get": "Get In Touch"
+  },
+  "about": {
+    "title": "About Me",
+    "details": "Here are some technologies that I have been working with recently:"
+  },
+  "project-section": {
+    "title": "Some Things I've Build",
+    "see-more": "See more projects"
+  },
+  "service-section": {
+    "title": "Services",
+    "description": "Services I offer to my clients"
+  },
+  "contact-section": {
+    "title": "Contact Me",
+    "description": "If you have a job offer, a project proposal or are interested in that we work together contact me."
+  },
+  "footer": {
+    "info":"Design & Built by"
+  }
+}

@@ -10,17 +10,21 @@ import {
   ServiceTitle,
   ServiceInfo,
 } from "./ServiceSectionElements";
+import { useTranslation } from "react-i18next";
 
 import { SMobile, SDesign, SDevelopment, SPrototype } from "../icons/services";
 
 const ServiceSection = () => {
+  const { t } = useTranslation("global");
   return (
     <ServiceContainer id="services">
       <TitleWrapper>
-        <Title section="03">Services</Title>
+        <Title section="03">{t("service-section.title")}</Title>
       </TitleWrapper>
       <ServiceContent>
-        <ServiceDescription>Services I offer to my clients</ServiceDescription>
+        <ServiceDescription>
+          {t("service-section.description")}
+        </ServiceDescription>
         <ServiceWrapper>
           <ServiceCard>
             <ServiceIcon>
