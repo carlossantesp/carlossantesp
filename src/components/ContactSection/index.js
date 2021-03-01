@@ -14,18 +14,20 @@ import {
   ContactSocialWrapper,
   ContactSocial,
 } from "./ContactSectionElements";
+import { useTranslation } from "react-i18next";
 
 const ContactSection = ({ contact }) => {
   const { email, github, codepen, linkedin, facebook } = contact;
+  const { t } = useTranslation("global");
+
   return (
     <ContactContainer id="contact">
       <TitleWrapper>
-        <Title section="04">Contact Me</Title>
+        <Title section="04">{t("contact-section.title")}</Title>
       </TitleWrapper>
       <ContactContent>
         <ContactDescription>
-          If you have a job offer, a project proposal or are interested in that
-          we work together contact me.
+          {t("contact-section.description")}
         </ContactDescription>
         <ContactSocialWrapper>
           <ContactSocial href={`mailto:${email}`}>

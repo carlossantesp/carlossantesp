@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { useTranslation } from "react-i18next";
 
 const FooterContainer = styled.footer`
   ${({ theme }) => theme.mixins.flexCenter};
@@ -22,9 +23,12 @@ const FooterDescription = styled.p`
 `;
 
 const Footer = ({ name }) => {
+  const { t } = useTranslation("global");
   return (
     <FooterContainer>
-      <FooterDescription>Design & Built by {name}</FooterDescription>
+      <FooterDescription>
+        {t("footer.info")} {name}
+      </FooterDescription>
     </FooterContainer>
   );
 };

@@ -12,9 +12,11 @@ import {
   HeroBtnWrapper,
 } from "./HeroSectionElements";
 import { BtnLinkC } from "../elements/Button";
+import { useTranslation } from "react-i18next";
 
 const HeroSection = ({ info }) => {
   const { name, job, resume, email } = info;
+  const { t } = useTranslation("global");
 
   return (
     <>
@@ -23,12 +25,12 @@ const HeroSection = ({ info }) => {
           <HeroImg src={Image} alt="Background image" />
         </HeroBg>
         <HeroContent>
-          <HeroSay>Hi, my name is</HeroSay>
+          <HeroSay>{t("hero.say")}</HeroSay>
           <HeroTitle>{name}</HeroTitle>
           <HeroSubtitle>{job}</HeroSubtitle>
           <HeroDescription>{resume}</HeroDescription>
           <HeroBtnWrapper>
-            <BtnLinkC href={`mailto:${email}`}>Get In Touch</BtnLinkC>
+            <BtnLinkC href={`mailto:${email}`}>{t("hero.button-get")}</BtnLinkC>
           </HeroBtnWrapper>
         </HeroContent>
       </HeroContainer>

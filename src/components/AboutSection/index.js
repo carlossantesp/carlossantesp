@@ -10,14 +10,17 @@ import {
   ImageSelf,
   AboutSkillWrapper,
 } from "./AboutSectionElements";
+import { useTranslation } from "react-i18next";
 
 const AboutSection = ({ data, skills }) => {
   const { image, description } = data;
+  const { t } = useTranslation("global");
+
   return (
     <>
       <AboutContainer id="about">
         <TitleWrapper>
-          <Title section="01">About Me</Title>
+          <Title section="01">{t("about.title")}</Title>
         </TitleWrapper>
         <AboutContent>
           <AboutDescWrapper>
@@ -29,9 +32,7 @@ const AboutSection = ({ data, skills }) => {
             <ImageSelf src={image} alt="Carlos Santillan" />
           </AboutImage>
           <AboutSkillWrapper>
-            <AboutDescription>
-              Here are some technologies that I have been working with recently:
-            </AboutDescription>
+            <AboutDescription>{t("about.details")}</AboutDescription>
             {skills.map((skill, index) => (
               <Skill key={index} skill={skill}></Skill>
             ))}

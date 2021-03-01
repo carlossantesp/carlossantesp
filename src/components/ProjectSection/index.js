@@ -7,12 +7,14 @@ import {
   ProjectContent,
   ProjectBtnWrapper,
 } from "./ProjectSectionElements";
+import { useTranslation } from "react-i18next";
 
 const ProjectSection = ({ projects }) => {
+  const { t } = useTranslation("global");
   return (
     <ProjectContainer id="projects">
       <TitleWrapper>
-        <Title section="02">Some Things I’ve Built</Title>
+        <Title section="02">{t("project-section.title")}</Title>
       </TitleWrapper>
       <ProjectContent>
         {projects.map((project) => (
@@ -24,7 +26,7 @@ const ProjectSection = ({ projects }) => {
           href="https://github.com/carlossantesp?tab=repositories"
           target="_blank"
         >
-          See more projects
+          {t("project-section.see-more")}
         </BtnLinkC>
       </ProjectBtnWrapper>
     </ProjectContainer>
