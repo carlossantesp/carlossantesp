@@ -4,29 +4,11 @@ import "./styles/index.css";
 import App from "./App";
 
 import { I18nextProvider } from "react-i18next";
-import i18next from "i18next";
-import global_es from "./translations/es/global.json";
-import global_en from "./translations/en/global.json";
-
-i18next.init({
-  resources: {
-    es: {
-      global: global_es,
-    },
-    en: {
-      global: global_en,
-    },
-  },
-  lng: "es",
-
-  interpolation: {
-    escapeValue: false,
-  },
-});
+import i18n from "./i18n";
 
 ReactDOM.render(
   <React.StrictMode>
-    <I18nextProvider i18n={i18next}>
+    <I18nextProvider i18n={i18n}>
       <App />
     </I18nextProvider>
   </React.StrictMode>,

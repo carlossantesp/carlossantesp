@@ -77,7 +77,7 @@ export const data = {
     },
     {
       id: "2",
-      name: "Lading Page Doll",
+      name: "Landing Page Doll",
       description:
         "DOLL informative web page, about Virtual Banking Made Easy, implemented with react.",
       repo: "https://github.com/carlossantesp/landingpage-doll",
@@ -87,7 +87,7 @@ export const data = {
     },
     {
       id: "3",
-      name: "Lading Page LoopStudio",
+      name: "Landing Page LoopStudio",
       description:
         "LoopStudio informative web page, about Immersive experiences that deliver, implemented with Grid and SASS.",
       repo: "https://github.com/carlossantesp/loopstudios-ladingpage",
