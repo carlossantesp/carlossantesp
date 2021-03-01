@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { animateScroll as scroll } from "react-scroll";
 import Logo from "../icons/Logo";
 import { BsMenu, BsTimes } from "../icons/basic";
+import { FgES, FgEN } from "../icons/languages";
 
 import {
   Nav,
@@ -14,6 +15,8 @@ import {
   NavItem,
   NavLinks,
   NavBtn,
+  NavLanguageWrapper,
+  BtnLinkFlag,
 } from "./NavbarElements";
 
 import { useTranslation } from "react-i18next";
@@ -22,7 +25,7 @@ import { BtnLink } from "../elements/Button";
 
 const Navbar = ({ isOpen, toggle, linkResume }) => {
   const [scrollNav, setScrollNav] = useState(false);
-  const { t } = useTranslation("global");
+  const { t, i18n } = useTranslation("global");
 
   const changeNav = () => {
     if (window.scrollY >= 80) setScrollNav(true);
@@ -36,6 +39,9 @@ const Navbar = ({ isOpen, toggle, linkResume }) => {
 
   const toggleHome = () => {
     scroll.scrollToTop();
+  };
+  const changeLanguage = (language) => {
+    i18n.changeLanguage(language);
   };
 
   return (
@@ -111,6 +117,14 @@ const Navbar = ({ isOpen, toggle, linkResume }) => {
                 {t("navbar.resume")}
               </BtnLink>
             </NavBtn>
+            <NavLanguageWrapper>
+              <BtnLinkFlag onClick={() => changeLanguage("es")}>
+                <FgES />
+              </BtnLinkFlag>
+              <BtnLinkFlag onClick={() => changeLanguage("en")}>
+                <FgEN />
+              </BtnLinkFlag>
+            </NavLanguageWrapper>
           </NavMenuContainer>
         </NavbarContainer>
       </Nav>

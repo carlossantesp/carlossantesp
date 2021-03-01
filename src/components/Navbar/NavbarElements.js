@@ -132,4 +132,31 @@ export const NavLinks = styled(LinkS)`
 
 export const NavBtn = styled.div`
   ${({ theme }) => theme.mixins.flexCenter};
+  margin-bottom: 1rem;
+  @media screen and (min-width: 992px) {
+    margin-bottom: 0;
+  }
+`;
+
+export const NavLanguageWrapper = styled.div`
+  display: flex;
+  gap: 0.5rem;
+  margin-left: 0.5rem;
+`;
+export const BtnLinkFlag = styled.button`
+  width: 3.25rem;
+  height: 3.25rem;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  display: block;
+  border-radius: 50%;
+  color: ${({ theme }) => theme.colorText};
+  &:hover {
+    border: 2px solid ${({ theme }) => theme.colorTextAccent};
+  }
+  @media screen and (min-width: 992px) {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
 `;
