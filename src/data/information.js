@@ -11,6 +11,8 @@ export const data = {
       ],
       resume:
         "I am a web developer with more than 2 years of experience in frontend, I am passionate about designing and implementing responsive websites for each device, following the mobile-first methodology.",
+      linkResume:
+        "https://drive.google.com/file/d/1JyK_uNwL0wHpCvs0gwSvo3lesq9FJeSm/view?usp=sharing",
     },
     es: {
       name: "Carlos Santillan",
@@ -23,6 +25,8 @@ export const data = {
       ],
       resume:
         "Soy un desarrollador web con más de 2 años de experiencia en frontend, me apasiona diseñar e implementar sitios web responsivos para cada dispositivo, siguiendo la metodología mobile-first.",
+      linkResume:
+        "https://drive.google.com/file/d/1p45l0LsdByhut1yrngPV83uwRItfZDwi/view?usp=sharing",
     },
   },
   socials: {

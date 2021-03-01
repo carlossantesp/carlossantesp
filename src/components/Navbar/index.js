@@ -20,7 +20,7 @@ import { useTranslation } from "react-i18next";
 
 import { BtnLink } from "../elements/Button";
 
-const Navbar = ({ isOpen, toggle }) => {
+const Navbar = ({ isOpen, toggle, linkResume }) => {
   const [scrollNav, setScrollNav] = useState(false);
   const { t } = useTranslation("global");
 
@@ -107,10 +107,7 @@ const Navbar = ({ isOpen, toggle }) => {
               </NavItem>
             </NavMenu>
             <NavBtn>
-              <BtnLink
-                href="https://drive.google.com/file/d/1JyK_uNwL0wHpCvs0gwSvo3lesq9FJeSm/view?usp=sharing"
-                target="_blank"
-              >
+              <BtnLink href={linkResume} target="_blank">
                 {t("navbar.resume")}
               </BtnLink>
             </NavBtn>

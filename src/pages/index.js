@@ -20,7 +20,11 @@ const Home = () => {
   return (
     <>
       <Head />
-      <Navbar isOpen={isOpen} toggle={toggle} />
+      <Navbar
+        isOpen={isOpen}
+        toggle={toggle}
+        linkResume={data.info[language].linkResume}
+      />
       <main className="main">
         <HeroSection info={data.info[language]} />
         <AboutSection data={data.info[language]} skills={data.skills} />
