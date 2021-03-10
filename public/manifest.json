@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Carlos Santillan",
+  "name": "Frontend Developer Carlos Santillan",
   "icons": [
     {
       "src": "favicon.ico",
@@ -19,7 +19,16 @@
     }
   ],
   "start_url": ".",
+  "lang": "en",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#66FCF1",
+  "background_color": "#0B0C10",
+  "description": "I am a web developer with more than 2 years of experience in frontend, I am passionate about designing and implementing responsive websites for each device, following the mobile-first methodology.",
+  "screenshots": [
+    {
+      "src": "/images/page.png",
+      "type": "image/png",
+      "sizes": "540x720"
+    }
+  ]
 }

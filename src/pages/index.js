@@ -7,7 +7,7 @@ import { data } from "../data/information";
 import ContactSection from "../components/ContactSection";
 import Footer from "../components/Footer";
 import ProjectSection from "../components/ProjectSection";
-import Head from "../components/Head";
+// import Head from "../components/Head";
 import { useTranslation } from "react-i18next";
 
 const Home = () => {
@@ -19,7 +19,7 @@ const Home = () => {
   };
   return (
     <>
-      <Head />
+      {/* <Head /> */}
       <Navbar
         isOpen={isOpen}
         toggle={toggle}
