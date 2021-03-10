@@ -2,17 +2,17 @@ import React, { useState } from "react";
 import HeroSection from "../components/HeroSection";
 import AboutSection from "../components/AboutSection";
 import ServiceSection from "../components/ServiceSection";
-import Navbar from "../components/Navbar";
 import { data } from "../data/information";
 import ContactSection from "../components/ContactSection";
 import Footer from "../components/Footer";
 import ProjectSection from "../components/ProjectSection";
 // import Head from "../components/Head";
 import { useTranslation } from "react-i18next";
+import Header from "../components/Header";
 
 const Home = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const { i18n } = useTranslation();
+  const { i18n } = useTranslation("global");
   const language = i18n.language;
   const toggle = () => {
     setIsOpen(!isOpen);
@@ -20,7 +20,7 @@ const Home = () => {
   return (
     <>
       {/* <Head /> */}
-      <Navbar
+      <Header
         isOpen={isOpen}
         toggle={toggle}
         linkResume={data.info[language].linkResume}

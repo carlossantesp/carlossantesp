@@ -1,15 +1,8 @@
-import React, { useEffect, useState } from "react";
-import { animateScroll as scroll } from "react-scroll";
-import Logo from "../icons/Logo";
-import { BsMenu, BsTimes } from "../icons/basic";
+import React from "react";
+import { BsTimes } from "../icons/basic";
 import { FgES, FgEN } from "../icons/languages";
 
 import {
-  Nav,
-  NavbarContainer,
-  NavLogo,
-  MobileIcon,
-  NavMenuContainer,
   MobileCloseIcon,
   NavMenu,
   NavItem,
@@ -23,111 +16,67 @@ import { useTranslation } from "react-i18next";
 
 import { BtnLink } from "../elements/Button";
 
-const Navbar = ({ isOpen, toggle, linkResume }) => {
-  const [scrollNav, setScrollNav] = useState(false);
+const Navbar = ({ toggle, linkResume }) => {
   const { t, i18n } = useTranslation("global");
 
-  const changeNav = () => {
-    if (window.scrollY >= 80) setScrollNav(true);
-    else setScrollNav(false);
-  };
+  const navbarLinkItems = [
+    {
+      name: t("navbar.about"),
+      path: "about",
+    },
+    {
+      name: t("navbar.projects"),
+      path: "projects",
+    },
+    {
+      name: t("navbar.services"),
+      path: "services",
+    },
+    {
+      name: t("navbar.contact"),
+      path: "contact",
+    },
+  ];
 
-  useEffect(() => {
-    window.addEventListener("scroll", changeNav);
-    return () => window.removeEventListener("scroll", changeNav);
-  }, []);
-
-  const toggleHome = () => {
-    scroll.scrollToTop();
-  };
   const changeLanguage = (language) => {
     i18n.changeLanguage(language);
   };
 
   return (
     <>
-      <Nav scrollNav={scrollNav}>
-        <NavbarContainer>
-          <NavLogo to="/" onClick={toggleHome}>
-            <Logo />
-          </NavLogo>
-          <MobileIcon onClick={toggle}>
-            <BsMenu />
-          </MobileIcon>
-          <NavMenuContainer isOpen={isOpen}>
-            <MobileCloseIcon onClick={toggle}>
-              <BsTimes />
-            </MobileCloseIcon>
-            <NavMenu>
-              <NavItem>
-                <NavLinks
-                  to="about"
-                  onClick={toggle}
-                  smooth={true}
-                  duration={500}
-                  spy={true}
-                  exact="true"
-                  offset={-64}
-                >
-                  {t("navbar.about")}
-                </NavLinks>
-              </NavItem>
-              <NavItem>
-                <NavLinks
-                  to="projects"
-                  onClick={toggle}
-                  smooth={true}
-                  duration={500}
-                  spy={true}
-                  exact="true"
-                  offset={-64}
-                >
-                  {t("navbar.projects")}
-                </NavLinks>
-              </NavItem>
-              <NavItem>
-                <NavLinks
-                  to="services"
-                  onClick={toggle}
-                  smooth={true}
-                  duration={500}
-                  spy={true}
-                  exact="true"
-                  offset={-64}
-                >
-                  {t("navbar.services")}
-                </NavLinks>
-              </NavItem>
-              <NavItem>
-                <NavLinks
-                  to="contact"
-                  onClick={toggle}
-                  smooth={true}
-                  duration={500}
-                  spy={true}
-                  exact="true"
-                  offset={-64}
-                >
-                  {t("navbar.contact")}
-                </NavLinks>
-              </NavItem>
-            </NavMenu>
-            <NavBtn>
-              <BtnLink href={linkResume} target="_blank">
-                {t("navbar.resume")}
-              </BtnLink>
-            </NavBtn>
-            <NavLanguageWrapper>
-              <BtnLinkFlag onClick={() => changeLanguage("es")}>
-                <FgES />
-              </BtnLinkFlag>
-              <BtnLinkFlag onClick={() => changeLanguage("en")}>
-                <FgEN />
-              </BtnLinkFlag>
-            </NavLanguageWrapper>
-          </NavMenuContainer>
-        </NavbarContainer>
-      </Nav>
+      <MobileCloseIcon onClick={toggle}>
+        <BsTimes />
+      </MobileCloseIcon>
+      <NavMenu>
+        {navbarLinkItems.map((item, index) => (
+          <NavItem key={index}>
+            <NavLinks
+              to={item.path}
+              onClick={toggle}
+              smooth={true}
+              duration={500}
+              spy={true}
+              exact="true"
+              offset={-64}
+            >
+              {item.name}
+            </NavLinks>
+          </NavItem>
+        ))}
+      </NavMenu>
+      <NavBtn>
+        <BtnLink href={linkResume} target="_blank">
+          {t("navbar.resume")}
+        </BtnLink>
+      </NavBtn>
+      <NavLanguageWrapper>
+        <BtnLinkFlag onClick={() => changeLanguage("es")}>
+          <FgES />
+        </BtnLinkFlag>
+        <BtnLinkFlag onClick={() => changeLanguage("en")}>
+          <FgEN />
+        </BtnLinkFlag>
+      </NavLanguageWrapper>
     </>
   );
 };
