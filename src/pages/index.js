@@ -6,7 +6,8 @@ import { data } from "../data/information";
 import ContactSection from "../components/ContactSection";
 import Footer from "../components/Footer";
 import ProjectSection from "../components/ProjectSection";
-// import Head from "../components/Head";
+import Head from "../components/Head";
+import { HeadProvider } from "react-head";
 import { useTranslation } from "react-i18next";
 import Header from "../components/Header";
 
@@ -18,8 +19,8 @@ const Home = () => {
     setIsOpen(!isOpen);
   };
   return (
-    <>
-      {/* <Head /> */}
+    <HeadProvider>
+      <Head />
       <Header
         isOpen={isOpen}
         toggle={toggle}
@@ -33,7 +34,7 @@ const Home = () => {
         <ContactSection contact={data.socials} />
         <Footer name={data.info[language].name} />
       </main>
-    </>
+    </HeadProvider>
   );
 };
 
