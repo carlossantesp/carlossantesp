@@ -1,5 +1,5 @@
 import React from "react";
-import { Title, TitleWrapper } from "../elements/Title";
+import { SMobile, SDesign, SDevelopment, SPrototype } from "../icons/services";
 import {
   ServiceContainer,
   ServiceContent,
@@ -10,12 +10,39 @@ import {
   ServiceTitle,
   ServiceInfo,
 } from "./ServiceSectionElements";
+import { Title, TitleWrapper } from "../elements/Title";
 import { useTranslation } from "react-i18next";
-
-import { SMobile, SDesign, SDevelopment, SPrototype } from "../icons/services";
 
 const ServiceSection = () => {
   const { t } = useTranslation("global");
+  const servicesData = [
+    {
+      id: 1,
+      title: t("service-section.responsive"),
+      description: t("service-section.responsive-info"),
+      icon: <SMobile />,
+    },
+    {
+      id: 2,
+      title: t("service-section.prototype"),
+      description: t("service-section.prototype-info"),
+      icon: <SPrototype />,
+    },
+    {
+      id: 3,
+      title: t("service-section.creative"),
+      description: t("service-section.creative-info"),
+      icon: <SDesign />,
+    },
+
+    {
+      id: 4,
+      title: t("service-section.development"),
+      description: t("service-section.development-info"),
+      icon: <SDevelopment />,
+    },
+  ];
+
   return (
     <ServiceContainer id="services">
       <TitleWrapper>
@@ -26,34 +53,13 @@ const ServiceSection = () => {
           {t("service-section.description")}
         </ServiceDescription>
         <ServiceWrapper>
-          <ServiceCard>
-            <ServiceIcon>
-              <SMobile />
-            </ServiceIcon>
-            <ServiceTitle>{t("service-section.responsive")}</ServiceTitle>
-            <ServiceInfo>{t("service-section.responsive-info")}</ServiceInfo>
-          </ServiceCard>
-          <ServiceCard>
-            <ServiceIcon>
-              <SPrototype />
-            </ServiceIcon>
-            <ServiceTitle>{t("service-section.prototype")}</ServiceTitle>
-            <ServiceInfo>{t("service-section.prototype-info")}</ServiceInfo>
-          </ServiceCard>
-          <ServiceCard>
-            <ServiceIcon>
-              <SDesign />
-            </ServiceIcon>
-            <ServiceTitle>{t("service-section.creative")}</ServiceTitle>
-            <ServiceInfo>{t("service-section.creative-info")}</ServiceInfo>
-          </ServiceCard>
-          <ServiceCard>
-            <ServiceIcon>
-              <SDevelopment />
-            </ServiceIcon>
-            <ServiceTitle>{t("service-section.development")}</ServiceTitle>
-            <ServiceInfo>{t("service-section.development-info")}</ServiceInfo>
-          </ServiceCard>
+          {servicesData.map((service) => (
+            <ServiceCard key={service.id}>
+              <ServiceIcon>{service.icon}</ServiceIcon>
+              <ServiceTitle>{service.title}</ServiceTitle>
+              <ServiceInfo>{service.description}</ServiceInfo>
+            </ServiceCard>
+          ))}
         </ServiceWrapper>
       </ServiceContent>
     </ServiceContainer>

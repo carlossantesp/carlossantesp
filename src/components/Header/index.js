@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { animateScroll as scroll } from "react-scroll";
-import Logo from "../icons/Logo";
-import Navbar from "../Navbar";
 import { BsMenu } from "../icons/basic";
 import {
   HeaderBrand,
@@ -10,9 +8,13 @@ import {
   HeaderNav,
   MobileIcon,
 } from "./HeaderElements";
+import Navbar from "../Navbar";
+import Logo from "../icons/Logo";
+import PropTypes from "prop-types";
 
 const Header = ({ isOpen, toggle, linkResume }) => {
   const [scrollNav, setScrollNav] = useState(false);
+
   const changeNav = () => {
     if (window.scrollY >= 80) setScrollNav(true);
     else setScrollNav(false);
@@ -42,6 +44,12 @@ const Header = ({ isOpen, toggle, linkResume }) => {
       </HeaderWrapper>
     </HeaderContent>
   );
+};
+
+Header.propTypes = {
+  isOpen: PropTypes.bool.isRequired,
+  toggle: PropTypes.func.isRequired,
+  linkResume: PropTypes.string.isRequired,
 };
 
 export default Header;

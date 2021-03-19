@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import Image from "../../images/image-bg.jpg";
 import {
   HeroContainer,
@@ -12,6 +12,7 @@ import {
   HeroBtnWrapper,
 } from "./HeroSectionElements";
 import { BtnLinkC } from "../elements/Button";
+import PropTypes from "prop-types";
 import { useTranslation } from "react-i18next";
 
 const HeroSection = ({ info }) => {
@@ -19,10 +20,10 @@ const HeroSection = ({ info }) => {
   const { t } = useTranslation("global");
 
   return (
-    <>
+    <Fragment>
       <HeroContainer id="home">
         <HeroBg>
-          <HeroImg src={Image} alt="Background image" />
+          <HeroImg src={Image} alt="Background image of a laptop" />
         </HeroBg>
         <HeroContent>
           <HeroSay>{t("hero.say")}</HeroSay>
@@ -34,8 +35,12 @@ const HeroSection = ({ info }) => {
           </HeroBtnWrapper>
         </HeroContent>
       </HeroContainer>
-    </>
+    </Fragment>
   );
+};
+
+HeroSection.propTypes = {
+  info: PropTypes.object.isRequired,
 };
 
 export default HeroSection;

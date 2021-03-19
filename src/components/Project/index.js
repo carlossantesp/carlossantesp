@@ -1,4 +1,5 @@
 import React from "react";
+import { BsGitHub, BsLink } from "../icons/basic";
 import {
   ProjectCard,
   ProjectHeader,
@@ -11,7 +12,7 @@ import {
   ProjectFooter,
   ProjectTool,
 } from "./ProjectElements";
-import { BsGitHub, BsLink } from "../icons/basic";
+import PropTypes from "prop-types";
 
 const Project = ({ project }) => {
   const { name, description, link, repo, image, technologies } = project;
@@ -21,16 +22,16 @@ const Project = ({ project }) => {
       <ProjectHeader>
         <ProjectImage src={image} />
         <ProjectLinksWrapper>
-          <ProjectLink href={repo} target="_blank">
+          <ProjectLink href={repo} target="_blank" rel="noopener noreferrer">
             <BsGitHub />
           </ProjectLink>
-          <ProjectLink href={link} target="_blank">
+          <ProjectLink href={link} target="_blank" rel="noopener noreferrer">
             <BsLink />
           </ProjectLink>
         </ProjectLinksWrapper>
       </ProjectHeader>
       <ProjectBody>
-        <ProjectTitle href={link} target="_blank">
+        <ProjectTitle href={link} target="_blank" rel="noopener noreferrer">
           {name}
         </ProjectTitle>
         <ProjectDescription>{description}</ProjectDescription>
@@ -42,6 +43,10 @@ const Project = ({ project }) => {
       </ProjectFooter>
     </ProjectCard>
   );
+};
+
+Project.propTypes = {
+  project: PropTypes.object.isRequired,
 };
 
 export default Project;

@@ -1,7 +1,6 @@
-import React from "react";
+import React, { Fragment } from "react";
 import { BsTimes } from "../icons/basic";
 import { FgES, FgEN } from "../icons/languages";
-
 import {
   MobileCloseIcon,
   NavMenu,
@@ -11,10 +10,9 @@ import {
   NavLanguageWrapper,
   BtnLinkFlag,
 } from "./NavbarElements";
-
 import { useTranslation } from "react-i18next";
-
 import { BtnLink } from "../elements/Button";
+import PropTypes from "prop-types";
 
 const Navbar = ({ toggle, linkResume }) => {
   const { t, i18n } = useTranslation("global");
@@ -43,7 +41,7 @@ const Navbar = ({ toggle, linkResume }) => {
   };
 
   return (
-    <>
+    <Fragment>
       <MobileCloseIcon onClick={toggle}>
         <BsTimes />
       </MobileCloseIcon>
@@ -65,7 +63,7 @@ const Navbar = ({ toggle, linkResume }) => {
         ))}
       </NavMenu>
       <NavBtn>
-        <BtnLink href={linkResume} target="_blank">
+        <BtnLink href={linkResume} target="_blank" rel="noopener noreferrer">
           {t("navbar.resume")}
         </BtnLink>
       </NavBtn>
@@ -77,8 +75,13 @@ const Navbar = ({ toggle, linkResume }) => {
           <FgEN />
         </BtnLinkFlag>
       </NavLanguageWrapper>
-    </>
+    </Fragment>
   );
+};
+
+Navbar.propTypes = {
+  toggle: PropTypes.func.isRequired,
+  linkResume: PropTypes.string.isRequired,
 };
 
 export default Navbar;

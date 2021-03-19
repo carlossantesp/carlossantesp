@@ -1,23 +1,25 @@
 import React, { useState } from "react";
+import Head from "../components/Head";
+import Header from "../components/Header";
 import HeroSection from "../components/HeroSection";
 import AboutSection from "../components/AboutSection";
+import ProjectSection from "../components/ProjectSection";
 import ServiceSection from "../components/ServiceSection";
-import { data } from "../data/information";
 import ContactSection from "../components/ContactSection";
 import Footer from "../components/Footer";
-import ProjectSection from "../components/ProjectSection";
-import Head from "../components/Head";
+import { data } from "../data/information";
 import { HeadProvider } from "react-head";
 import { useTranslation } from "react-i18next";
-import Header from "../components/Header";
 
 const Home = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { i18n } = useTranslation("global");
   const language = i18n.language;
+
   const toggle = () => {
     setIsOpen(!isOpen);
   };
+
   return (
     <HeadProvider>
       <Head />
@@ -32,8 +34,8 @@ const Home = () => {
         <ProjectSection projects={data.projects[language]} />
         <ServiceSection />
         <ContactSection contact={data.socials} />
-        <Footer name={data.info[language].name} />
       </main>
+      <Footer name={data.info[language].name} />
     </HeadProvider>
   );
 };

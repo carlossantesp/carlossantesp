@@ -5,6 +5,7 @@ import {
   SkillIcon,
   SkillLabel,
 } from "./SkillElements";
+import PropTypes from "prop-types";
 
 const Skill = ({ skill }) => {
   const { title, icon } = skill;
@@ -16,6 +17,10 @@ const Skill = ({ skill }) => {
       <SkillLabel>{title}</SkillLabel>
     </SkillWrapper>
   );
+};
+
+Skill.propTypes = {
+  skill: PropTypes.object.isRequired,
 };
 
 export default Skill;

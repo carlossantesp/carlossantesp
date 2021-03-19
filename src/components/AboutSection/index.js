@@ -1,6 +1,4 @@
-import React from "react";
-import { Title, TitleWrapper } from "../elements/Title";
-import Skill from "../Skill";
+import React, { Fragment } from "react";
 import {
   AboutContainer,
   AboutContent,
@@ -10,14 +8,17 @@ import {
   ImageSelf,
   AboutSkillWrapper,
 } from "./AboutSectionElements";
+import { Title, TitleWrapper } from "../elements/Title";
+import Skill from "../Skill";
 import { useTranslation } from "react-i18next";
+import PropTypes from "prop-types";
 
 const AboutSection = ({ data, skills }) => {
   const { image, description } = data;
   const { t } = useTranslation("global");
 
   return (
-    <>
+    <Fragment>
       <AboutContainer id="about">
         <TitleWrapper>
           <Title section="01">{t("about.title")}</Title>
@@ -39,8 +40,13 @@ const AboutSection = ({ data, skills }) => {
           </AboutSkillWrapper>
         </AboutContent>
       </AboutContainer>
-    </>
+    </Fragment>
   );
+};
+
+AboutSection.propTypes = {
+  data: PropTypes.object.isRequired,
+  skills: PropTypes.array.isRequired,
 };
 
 export default AboutSection;
