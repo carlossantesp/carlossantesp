@@ -1,8 +1,7 @@
-import React from "react";
 import styled from "styled-components";
 import { ReactSVG } from "react-svg";
 
-const SkillWrapper = styled.div`
+export const SkillWrapper = styled.div`
   ${({ theme }) => theme.mixins.flexCenter};
   background-color: ${({ theme }) => theme.colorBgAccent};
   color: ${({ theme }) => theme.colorTextAccent};
@@ -23,7 +22,7 @@ const SkillWrapper = styled.div`
     border-radius: 0.25rem;
   }
 `;
-const SkillIconContent = styled.div`
+export const SkillIconContent = styled.div`
   ${({ theme }) => theme.mixins.flexCenter};
   width: 1rem;
   height: 1rem;
@@ -34,27 +33,13 @@ const SkillIconContent = styled.div`
     margin-right: 0;
   }
 `;
-const SkillIcon = styled(ReactSVG)`
+export const SkillIcon = styled(ReactSVG)`
   width: 100%;
   div {
     ${({ theme }) => theme.mixins.flexCenter};
   }
 `;
-const SkillLabel = styled.p`
+export const SkillLabel = styled.p`
   font-family: ${({ theme }) => theme.fontFira};
   font-size: 0.875rem;
 `;
-
-const Skill = ({ skill }) => {
-  const { title, icon } = skill;
-  return (
-    <SkillWrapper>
-      <SkillIconContent>
-        <SkillIcon src={icon} />
-      </SkillIconContent>
-      <SkillLabel>{title}</SkillLabel>
-    </SkillWrapper>
-  );
-};
-
-export default Skill;
