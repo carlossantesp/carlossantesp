@@ -1,8 +1,6 @@
-import React from "react";
 import styled from "styled-components";
-import { useTranslation } from "react-i18next";
 
-const FooterContainer = styled.footer`
+export const FooterContainer = styled.footer`
   ${({ theme }) => theme.mixins.flexCenter};
   background-color: ${({ theme }) => theme.colorBgAccent};
   margin: 5rem 0 0 0;
@@ -11,7 +9,7 @@ const FooterContainer = styled.footer`
   }
 `;
 
-const FooterDescription = styled.p`
+export const FooterDescription = styled.p`
   font-family: ${({ theme }) => theme.fontFira};
   color: ${({ theme }) => theme.colorTextAccent};
   font-size: 0.75rem;
@@ -21,16 +19,3 @@ const FooterDescription = styled.p`
     padding: 1.2rem 0;
   }
 `;
-
-const Footer = ({ name }) => {
-  const { t } = useTranslation("global");
-  return (
-    <FooterContainer>
-      <FooterDescription>
-        {t("footer.info")} {name}
-      </FooterDescription>
-    </FooterContainer>
-  );
-};
-
-export default Footer;
