@@ -4,8 +4,8 @@ import {
   ProjectContent,
   ProjectBtnWrapper,
 } from "./ProjectSectionElements";
-import { Title, TitleWrapper } from "../elements/Title";
-import { BtnLinkC } from "../elements/Button";
+import Title from "../elements/Title";
+import Button from "../elements/Button";
 import Project from "../Project";
 import { InformationContext } from "../../context/InformationContext";
 
@@ -14,22 +14,19 @@ const ProjectSection = () => {
 
   return (
     <ProjectContainer id="projects">
-      <TitleWrapper>
-        <Title section="02">{t("project-section.title")}</Title>
-      </TitleWrapper>
+      <Title section="02">{t("project-section.title")}</Title>
       <ProjectContent>
         {projects.map((project) => (
           <Project key={project.id} project={project}></Project>
         ))}
       </ProjectContent>
       <ProjectBtnWrapper>
-        <BtnLinkC
-          href="https://github.com/carlossantesp?tab=repositories"
-          target="_blank"
-          rel="noopener noreferrer"
+        <Button
+          linkUrl="https://github.com/carlossantesp?tab=repositories"
+          external={true}
         >
           {t("project-section.see-more")}
-        </BtnLinkC>
+        </Button>
       </ProjectBtnWrapper>
     </ProjectContainer>
   );

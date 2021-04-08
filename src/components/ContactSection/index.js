@@ -13,7 +13,7 @@ import {
   ContactSocialWrapper,
   ContactSocial,
 } from "./ContactSectionElements";
-import { Title, TitleWrapper } from "../elements/Title";
+import Title from "../elements/Title";
 import { InformationContext } from "../../context/InformationContext";
 
 const ContactSection = () => {
@@ -22,9 +22,7 @@ const ContactSection = () => {
 
   return (
     <ContactContainer id="contact">
-      <TitleWrapper>
-        <Title section="04">{t("contact-section.title")}</Title>
-      </TitleWrapper>
+      <Title section="04">{t("contact-section.title")}</Title>
       <ContactContent>
         <ContactDescription>
           {t("contact-section.description")}

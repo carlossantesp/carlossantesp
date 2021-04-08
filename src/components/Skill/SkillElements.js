@@ -9,7 +9,6 @@ export const SkillWrapper = styled.div`
   padding: 0.25rem 0.5rem;
   border-radius: 0.5rem;
   border: 1px solid ${({ theme }) => theme.colorTextAccent};
-  cursor: pointer;
   &:hover {
     background-color: #575a5e;
   }

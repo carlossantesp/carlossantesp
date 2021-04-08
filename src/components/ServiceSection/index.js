@@ -10,7 +10,7 @@ import {
   ServiceTitle,
   ServiceInfo,
 } from "./ServiceSectionElements";
-import { Title, TitleWrapper } from "../elements/Title";
+import Title from "../elements/Title";
 import { useTranslation } from "react-i18next";
 
 const ServiceSection = () => {
@@ -45,9 +45,7 @@ const ServiceSection = () => {
 
   return (
     <ServiceContainer id="services">
-      <TitleWrapper>
-        <Title section="03">{t("service-section.title")}</Title>
-      </TitleWrapper>
+      <Title section="03">{t("service-section.title")}</Title>
       <ServiceContent>
         <ServiceDescription>
           {t("service-section.description")}

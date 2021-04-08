@@ -1,6 +1,7 @@
+import React from "react";
 import styled from "styled-components";
 
-export const Title = styled.h2`
+const TitleContent = styled.h2`
   color: ${({ theme }) => theme.colorText};
   font-family: ${({ theme }) => theme.fontOswald};
   font-size: 1.75rem;
@@ -31,7 +32,7 @@ export const Title = styled.h2`
   }
 `;
 
-export const TitleWrapper = styled.div`
+const TitleWrapper = styled.div`
   ${({ theme }) => theme.bg.mobileL};
   margin: 0 auto;
   @media screen and (min-width: 768px) {
@@ -41,3 +42,13 @@ export const TitleWrapper = styled.div`
     ${({ theme }) => theme.bg.tabletL};
   }
 `;
+
+const Title = ({ children, section }) => {
+  return (
+    <TitleWrapper>
+      <TitleContent section={section}>{children}</TitleContent>
+    </TitleWrapper>
+  );
+};
+
+export default Title;

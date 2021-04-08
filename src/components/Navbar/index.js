@@ -10,7 +10,7 @@ import {
   NavLanguageWrapper,
   BtnLinkFlag,
 } from "./NavbarElements";
-import { BtnLink } from "../elements/Button";
+import Button from "../elements/Button";
 import PropTypes from "prop-types";
 import { InformationContext } from "../../context/InformationContext";
 
@@ -59,9 +59,9 @@ const Navbar = ({ toggle }) => {
         ))}
       </NavMenu>
       <NavBtn>
-        <BtnLink href={resumen} target="_blank" rel="noopener noreferrer">
+        <Button linkUrl={resumen} external={true} size="small">
           {t("navbar.resume")}
-        </BtnLink>
+        </Button>
       </NavBtn>
       <NavLanguageWrapper>
         <BtnLinkFlag

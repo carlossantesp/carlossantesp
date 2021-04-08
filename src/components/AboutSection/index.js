@@ -8,7 +8,7 @@ import {
   ImageSelf,
   AboutSkillWrapper,
 } from "./AboutSectionElements";
-import { Title, TitleWrapper } from "../elements/Title";
+import Title from "../elements/Title";
 import Skill from "../Skill";
 import { InformationContext } from "../../context/InformationContext";
 
@@ -19,9 +19,7 @@ const AboutSection = () => {
   return (
     <Fragment>
       <AboutContainer id="about">
-        <TitleWrapper>
-          <Title section="01">{t("about.title")}</Title>
-        </TitleWrapper>
+        <Title section="01">{t("about.title")}</Title>
         <AboutContent>
           <AboutDescWrapper>
             {description.map((el, index) => (

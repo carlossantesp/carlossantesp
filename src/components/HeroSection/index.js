@@ -11,7 +11,7 @@ import {
   HeroDescription,
   HeroBtnWrapper,
 } from "./HeroSectionElements";
-import { BtnLinkC } from "../elements/Button";
+import Button from "../elements/Button";
 import { InformationContext } from "../../context/InformationContext";
 
 const HeroSection = () => {
@@ -30,7 +30,9 @@ const HeroSection = () => {
           <HeroSubtitle>{job}</HeroSubtitle>
           <HeroDescription>{resume}</HeroDescription>
           <HeroBtnWrapper>
-            <BtnLinkC href={`mailto:${email}`}>{t("hero.button-get")}</BtnLinkC>
+            <Button linkUrl={`mailto:${email}`} external={true}>
+              {t("hero.button-get")}
+            </Button>
           </HeroBtnWrapper>
         </HeroContent>
       </HeroContainer>
