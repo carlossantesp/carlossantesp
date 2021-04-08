@@ -42,7 +42,7 @@ const Navbar = ({ toggle, linkResume }) => {
 
   return (
     <Fragment>
-      <MobileCloseIcon onClick={toggle}>
+      <MobileCloseIcon onClick={toggle} aria-label="Close menu">
         <BsTimes />
       </MobileCloseIcon>
       <NavMenu>
@@ -50,12 +50,12 @@ const Navbar = ({ toggle, linkResume }) => {
           <NavItem key={index}>
             <NavLinks
               to={item.path}
-              onClick={toggle}
               smooth={true}
               duration={500}
               spy={true}
               exact="true"
               offset={-64}
+              tabIndex={0}
             >
               {item.name}
             </NavLinks>
@@ -68,10 +68,16 @@ const Navbar = ({ toggle, linkResume }) => {
         </BtnLink>
       </NavBtn>
       <NavLanguageWrapper>
-        <BtnLinkFlag onClick={() => changeLanguage("es")}>
+        <BtnLinkFlag
+          onClick={() => changeLanguage("es")}
+          aria-label="Language spanish change"
+        >
           <FgES />
         </BtnLinkFlag>
-        <BtnLinkFlag onClick={() => changeLanguage("en")}>
+        <BtnLinkFlag
+          onClick={() => changeLanguage("en")}
+          aria-label="Language english change"
+        >
           <FgEN />
         </BtnLinkFlag>
       </NavLanguageWrapper>

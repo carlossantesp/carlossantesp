@@ -32,7 +32,9 @@ export const HeaderBrand = styled(Link)`
   height: ${({ theme }) => theme.sizeMenuIcon};
 `;
 
-export const MobileIcon = styled.div`
+export const MobileIcon = styled.button`
+  background: transparent;
+  border: none;
   display: inline-block;
   cursor: pointer;
   width: ${({ theme }) => theme.sizeMenuIcon};

@@ -4,7 +4,7 @@ import { Base } from "react-head";
 const Head = () => {
   return (
     <>
-      <Base href="https://carlos.santillan.dev" />
+      <Base href="/" />
     </>
   );
 };

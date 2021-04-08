@@ -30,7 +30,7 @@ const AboutSection = ({ data, skills }) => {
             ))}
           </AboutDescWrapper>
           <AboutImage>
-            <ImageSelf src={image} alt="Carlos Santillan" />
+            <ImageSelf src={image} alt="photography by carlos Santillan" />
           </AboutImage>
           <AboutSkillWrapper>
             <AboutDescription>{t("about.details")}</AboutDescription>

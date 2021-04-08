@@ -32,10 +32,15 @@ const Header = ({ isOpen, toggle, linkResume }) => {
   return (
     <HeaderContent scrollNav={scrollNav}>
       <HeaderWrapper>
-        <HeaderBrand to="/" onClick={toggleHome}>
+        <HeaderBrand
+          aria-label="Carlos Santillan logo"
+          role="logo"
+          to="/"
+          onClick={toggleHome}
+        >
           <Logo />
         </HeaderBrand>
-        <MobileIcon onClick={toggle}>
+        <MobileIcon onClick={toggle} aria-label="Menu">
           <BsMenu />
         </MobileIcon>
         <HeaderNav isOpen={isOpen}>

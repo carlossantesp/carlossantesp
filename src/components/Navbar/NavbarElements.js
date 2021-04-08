@@ -1,7 +1,9 @@
 import styled from "styled-components";
 import { Link } from "react-scroll";
 
-export const MobileCloseIcon = styled.div`
+export const MobileCloseIcon = styled.button`
+  background-color: transparent;
+  border: none;
   position: absolute;
   cursor: pointer;
   display: block;
