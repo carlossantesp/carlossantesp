@@ -1,23 +1,17 @@
-import React from "react";
+import React, { useContext } from "react";
 import { FooterContainer, FooterDescription } from "./FooterElements";
-import { useTranslation } from "react-i18next";
-import PropTypes from "prop-types";
+import { InformationContext } from "../../context/InformationContext";
 
-const Footer = ({ name }) => {
-  const dateYear = new Date().getFullYear();
+const Footer = () => {
+  const { t, author } = useContext(InformationContext);
 
-  const { t } = useTranslation("global");
   return (
     <FooterContainer>
       <FooterDescription>
-        {t("footer.info")} {name} &copy; {dateYear}
+        {t("footer.info")} {author} &copy; {new Date().getFullYear()}
       </FooterDescription>
     </FooterContainer>
   );
-};
-
-Footer.propTypes = {
-  name: PropTypes.string.isRequired,
 };
 
 export default Footer;

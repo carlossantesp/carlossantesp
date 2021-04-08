@@ -9,10 +9,9 @@ import {
 } from "./HeaderElements";
 import Navbar from "../Navbar";
 import Logo from "../icons/Logo";
-import PropTypes from "prop-types";
 import { useNavbar } from "../../hooks/useNavbar";
 
-const Header = ({ linkResume }) => {
+const Header = () => {
   const { scrollNav, toggleHome, isOpen, toggle } = useNavbar();
 
   return (
@@ -30,15 +29,11 @@ const Header = ({ linkResume }) => {
           <BsMenu />
         </MobileIcon>
         <HeaderNav isOpen={isOpen}>
-          <Navbar toggle={toggle} linkResume={linkResume} />
+          <Navbar toggle={toggle} />
         </HeaderNav>
       </HeaderWrapper>
     </HeaderContent>
   );
-};
-
-Header.propTypes = {
-  linkResume: PropTypes.string.isRequired,
 };
 
 export default Header;

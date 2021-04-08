@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useContext } from "react";
 import { BsTimes } from "../icons/basic";
 import { FgES, FgEN } from "../icons/languages";
 import {
@@ -10,12 +10,12 @@ import {
   NavLanguageWrapper,
   BtnLinkFlag,
 } from "./NavbarElements";
-import { useTranslation } from "react-i18next";
 import { BtnLink } from "../elements/Button";
 import PropTypes from "prop-types";
+import { InformationContext } from "../../context/InformationContext";
 
-const Navbar = ({ toggle, linkResume }) => {
-  const { t, i18n } = useTranslation("global");
+const Navbar = ({ toggle }) => {
+  const { t, changeLanguage, resumen } = useContext(InformationContext);
 
   const navbarLinkItems = [
     {
@@ -35,10 +35,6 @@ const Navbar = ({ toggle, linkResume }) => {
       path: "contact",
     },
   ];
-
-  const changeLanguage = (language) => {
-    i18n.changeLanguage(language);
-  };
 
   return (
     <Fragment>
@@ -63,7 +59,7 @@ const Navbar = ({ toggle, linkResume }) => {
         ))}
       </NavMenu>
       <NavBtn>
-        <BtnLink href={linkResume} target="_blank" rel="noopener noreferrer">
+        <BtnLink href={resumen} target="_blank" rel="noopener noreferrer">
           {t("navbar.resume")}
         </BtnLink>
       </NavBtn>
@@ -87,7 +83,6 @@ const Navbar = ({ toggle, linkResume }) => {
 
 Navbar.propTypes = {
   toggle: PropTypes.func.isRequired,
-  linkResume: PropTypes.string.isRequired,
 };
 
 export default Navbar;

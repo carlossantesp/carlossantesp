@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useContext } from "react";
 import {
   AboutContainer,
   AboutContent,
@@ -10,12 +10,11 @@ import {
 } from "./AboutSectionElements";
 import { Title, TitleWrapper } from "../elements/Title";
 import Skill from "../Skill";
-import { useTranslation } from "react-i18next";
-import PropTypes from "prop-types";
+import { InformationContext } from "../../context/InformationContext";
 
-const AboutSection = ({ data, skills }) => {
-  const { image, description } = data;
-  const { t } = useTranslation("global");
+const AboutSection = () => {
+  const { t, info, skills } = useContext(InformationContext);
+  const { image, description } = info;
 
   return (
     <Fragment>
@@ -42,11 +41,6 @@ const AboutSection = ({ data, skills }) => {
       </AboutContainer>
     </Fragment>
   );
-};
-
-AboutSection.propTypes = {
-  data: PropTypes.object.isRequired,
-  skills: PropTypes.array.isRequired,
 };
 
 export default AboutSection;

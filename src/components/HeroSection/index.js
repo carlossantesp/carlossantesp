@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useContext } from "react";
 import Image from "../../images/image-bg.jpg";
 import {
   HeroContainer,
@@ -12,12 +12,11 @@ import {
   HeroBtnWrapper,
 } from "./HeroSectionElements";
 import { BtnLinkC } from "../elements/Button";
-import PropTypes from "prop-types";
-import { useTranslation } from "react-i18next";
+import { InformationContext } from "../../context/InformationContext";
 
-const HeroSection = ({ info }) => {
+const HeroSection = () => {
+  const { t, info } = useContext(InformationContext);
   const { name, job, resume, email } = info;
-  const { t } = useTranslation("global");
 
   return (
     <Fragment>
@@ -37,10 +36,6 @@ const HeroSection = ({ info }) => {
       </HeroContainer>
     </Fragment>
   );
-};
-
-HeroSection.propTypes = {
-  info: PropTypes.object.isRequired,
 };
 
 export default HeroSection;

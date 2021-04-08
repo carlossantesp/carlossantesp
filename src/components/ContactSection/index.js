@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import {
   BsEmail,
   BsGitHub,
@@ -14,12 +14,11 @@ import {
   ContactSocial,
 } from "./ContactSectionElements";
 import { Title, TitleWrapper } from "../elements/Title";
-import { useTranslation } from "react-i18next";
-import PropTypes from "prop-types";
+import { InformationContext } from "../../context/InformationContext";
 
-const ContactSection = ({ contact }) => {
-  const { email, github, codepen, linkedin, facebook } = contact;
-  const { t } = useTranslation("global");
+const ContactSection = () => {
+  const { t, socials } = useContext(InformationContext);
+  const { email, github, codepen, linkedin, facebook } = socials;
 
   return (
     <ContactContainer id="contact">
@@ -66,10 +65,6 @@ const ContactSection = ({ contact }) => {
       </ContactContent>
     </ContactContainer>
   );
-};
-
-ContactSection.propTypes = {
-  contact: PropTypes.object.isRequired,
 };
 
 export default ContactSection;

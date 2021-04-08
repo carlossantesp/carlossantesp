@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import {
   ProjectContainer,
   ProjectContent,
@@ -7,11 +7,11 @@ import {
 import { Title, TitleWrapper } from "../elements/Title";
 import { BtnLinkC } from "../elements/Button";
 import Project from "../Project";
-import { useTranslation } from "react-i18next";
-import PropTypes from "prop-types";
+import { InformationContext } from "../../context/InformationContext";
 
-const ProjectSection = ({ projects }) => {
-  const { t } = useTranslation("global");
+const ProjectSection = () => {
+  const { t, projects } = useContext(InformationContext);
+
   return (
     <ProjectContainer id="projects">
       <TitleWrapper>
@@ -33,10 +33,6 @@ const ProjectSection = ({ projects }) => {
       </ProjectBtnWrapper>
     </ProjectContainer>
   );
-};
-
-ProjectSection.propTypes = {
-  projects: PropTypes.array.isRequired,
 };
 
 export default ProjectSection;

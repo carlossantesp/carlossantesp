@@ -1,4 +1,5 @@
 import React from "react";
+import { HeadProvider } from "react-head";
 import Head from "../components/Head";
 import Header from "../components/Header";
 import HeroSection from "../components/HeroSection";
@@ -7,26 +8,23 @@ import ProjectSection from "../components/ProjectSection";
 import ServiceSection from "../components/ServiceSection";
 import ContactSection from "../components/ContactSection";
 import Footer from "../components/Footer";
-import { data } from "../data/information";
-import { HeadProvider } from "react-head";
-import { useTranslation } from "react-i18next";
+import { InformationProvider } from "../context/InformationContext";
 
 const Home = () => {
-  const { i18n } = useTranslation("global");
-  const language = i18n.language;
-
   return (
     <HeadProvider>
       <Head />
-      <Header linkResume={data.info[language].linkResume} />
-      <main className="main">
-        <HeroSection info={data.info[language]} />
-        <AboutSection data={data.info[language]} skills={data.skills} />
-        <ProjectSection projects={data.projects[language]} />
-        <ServiceSection />
-        <ContactSection contact={data.socials} />
-      </main>
-      <Footer name={data.info[language].name} />
+      <InformationProvider>
+        <Header />
+        <main className="main">
+          <HeroSection />
+          <AboutSection />
+          <ProjectSection />
+          <ServiceSection />
+          <ContactSection />
+        </main>
+        <Footer />
+      </InformationProvider>
     </HeadProvider>
   );
 };
