@@ -18,6 +18,10 @@
     "title": "Some Things I've Build",
     "see-more": "See more projects"
   },
+  "project": {
+    "code": "Code",
+    "project": "Project"
+  },
   "service-section": {
     "title": "Services",
     "description": "Services I offer to my clients",

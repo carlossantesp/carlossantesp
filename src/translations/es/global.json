@@ -18,6 +18,10 @@
     "title": "Projectos que desarrolle",
     "see-more": "Ver más proyectos"
   },
+  "project": {
+    "code": "Código",
+    "project": "Proyecto"
+  },
   "service-section": {
     "title": "Servicios",
     "description": "Servicios que ofrezco a mis clientes",

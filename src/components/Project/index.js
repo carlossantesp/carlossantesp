@@ -1,34 +1,26 @@
-import React from "react";
+import React, { useContext } from "react";
 import { BsGitHub, BsLink } from "../icons/basic";
 import {
   ProjectCard,
   ProjectHeader,
   ProjectImage,
-  ProjectLinksWrapper,
-  ProjectLink,
   ProjectBody,
   ProjectTitle,
   ProjectDescription,
   ProjectFooter,
-  ProjectTool,
 } from "./ProjectElements";
 import PropTypes from "prop-types";
+import Button from "../elements/Button";
+import { InformationContext } from "../../context/InformationContext";
 
 const Project = ({ project }) => {
-  const { name, description, link, repo, image, technologies } = project;
+  const { t } = useContext(InformationContext);
+  const { name, description, link, repo, image } = project;
 
   return (
     <ProjectCard>
       <ProjectHeader>
         <ProjectImage src={image} />
-        <ProjectLinksWrapper>
-          <ProjectLink href={repo} target="_blank" rel="noopener noreferrer">
-            <BsGitHub />
-          </ProjectLink>
-          <ProjectLink href={link} target="_blank" rel="noopener noreferrer">
-            <BsLink />
-          </ProjectLink>
-        </ProjectLinksWrapper>
       </ProjectHeader>
       <ProjectBody>
         <ProjectTitle href={link} target="_blank" rel="noopener noreferrer">
@@ -37,9 +29,18 @@ const Project = ({ project }) => {
         <ProjectDescription>{description}</ProjectDescription>
       </ProjectBody>
       <ProjectFooter>
-        {technologies.map((techology, index) => (
-          <ProjectTool key={index}>{techology}</ProjectTool>
-        ))}
+        <Button
+          size="small"
+          linkUrl={link}
+          external={true}
+          block={true}
+          secondary={true}
+        >
+          <BsLink /> {t("project.project")}
+        </Button>
+        <Button size="small" linkUrl={repo} external={true} block={true}>
+          <BsGitHub /> {t("project.code")}
+        </Button>
       </ProjectFooter>
     </ProjectCard>
   );
